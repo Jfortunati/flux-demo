@@ -1,0 +1,15 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: tests-trigger
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./tests/trigger
+  prune: true
+  wait: true
+  dependsOn:
+    - name: podinfo          # ensure app applied/healthy first
+  sourceRef:
+    kind: GitRepository
+    name: flux-system

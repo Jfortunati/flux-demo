@@ -1,0 +1,12 @@
+apiVersion: testworkflows.testkube.io/v1
+kind: TestWorkflowExecution
+metadata:
+  name: podinfo-health-exec
+  namespace: testkube        # your Testkube agent namespace
+  annotations:
+    bump-number: "1"   # bump this string per run (or substitute it)
+spec:
+  workflow:
+    name: podinfo-health     # must match an existing Test Workflow
+  labels:
+    trigger: flux-crd
