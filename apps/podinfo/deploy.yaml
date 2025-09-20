@@ -10,7 +10,7 @@ spec:
     metadata: 
       labels:
         app: podinfo
-        bump: 1
+        bump: '1'
     spec:
       containers:
       - name: podinfo
