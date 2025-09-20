@@ -7,7 +7,10 @@ spec:
   replicas: 1
   selector: { matchLabels: { app: podinfo } }
   template:
-    metadata: { labels: { app: podinfo } }
+    metadata: 
+      labels:
+        app: podinfo
+        bump: 1
     spec:
       containers:
       - name: podinfo

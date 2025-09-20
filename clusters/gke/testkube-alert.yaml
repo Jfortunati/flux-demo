@@ -1,0 +1,12 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: run-tests-on-deploy
+  namespace: flux-system
+spec:
+  providerRef:
+    name: testkube
+  eventSeverity: info
+  eventSources:
+    - kind: Kustomization
+      name: podinfo
