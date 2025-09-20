@@ -8,5 +8,5 @@ spec:
     name: testkube
   eventSeverity: info
   eventSources:
-    - kind: Kustomization
-      name: podinfo
+    - kind: GitRepository
+      name: flux-system
