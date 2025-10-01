@@ -8,6 +8,6 @@ metadata:
   annotations:
     bump-number: "2"   # bump this string per run (or substitute it)
 spec:
-  workflow:
+  testWorkflow:
     name: podinfo-health     # must match an existing Test Workflow
 
