@@ -1,6 +1,7 @@
+# clusters/gke/kustomization.yaml  (overwrite it with this)
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - flux-system                # keep Flux bootstrapped bits
-  - podinfo-kustomization.yaml # your app Kustomization
-  - tests-kustomization.yaml   # your tests trigger Kustomization
+  - flux-system
+  - podinfo-kustomization.yaml
+  - tests-kustomization.yaml
