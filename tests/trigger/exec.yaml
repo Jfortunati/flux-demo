@@ -4,7 +4,7 @@ metadata:
   name: podinfo-health-exec
   namespace: testkube        # your Testkube agent namespace
   labels:
-    trigger: flux-crd
+    trigger: 'flux-crd'
   annotations:
     bump-number: "2"   # bump this string per run (or substitute it)
 spec:
